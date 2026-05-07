@@ -183,9 +183,9 @@ while True:
           print("Agrademos pela preferência. Volte sempre!")
           print("Avaliação\n1⭐\n2⭐⭐\n3⭐⭐⭐\n4⭐⭐⭐⭐\n5⭐⭐⭐⭐⭐")
           str(input("Deixe seu Feedback!\n"))
-          break
-
           vagas_disponiveis = vagas_disponiveis +1
+          continue
+
 
         elif forma_pagamento == 2:
          saldo = float(input("Digite o saldo em sua conta:\n"))
