@@ -1,3 +1,4 @@
+
 total_vagas =500
 vagas_disponiveis =500
 vagas_ocupadas = total_vagas - vagas_disponiveis
@@ -15,7 +16,7 @@ while True:
    escolha_menu = int(input("Digite o número da opção escolhida:\n"))
    
    if escolha_menu == 1:
-      
+     
       print("Bem vindo ao Shoppinh Center!")
      
       escolha_entrada = str(input("Informe qual maneira deseja entrar:\n1- Via Tag\n2- Via Ticket\n"))
@@ -26,19 +27,19 @@ while True:
        if status_tag == "sim":
         tag_id = input("Digite o ID da Tag:\n")
         horario_chegada= float(input("Informe seu horário de chegada:\n"))
-        
+       
         print("Levantando cancela...")
         import time
         time.sleep(3)
         print("Acesso liberado!")
-      
+     
        elif status_tag == "nao" or status_tag == "não":
          print("Ative sua Tag para liberar o acesso e tente novamente.")
          
        
-      
+     
       elif escolha_entrada == "2":
-        
+       
         if vagas_disponiveis >0:
            import time
            time.sleep(2)
@@ -74,14 +75,14 @@ while True:
 
         elif 0.15 < tempo_de_permanencia <=3:
            valor_fixo = 15.00
-        
+       
            print(f"Valor total: R${valor_fixo}")
-      
+     
         elif tempo_de_permanencia >3:
           valor_fixo = 15.00
-          hora_adicional = tempo_de_permanencia * 3 
+          hora_adicional = tempo_de_permanencia * 3
           subtracao_de_juros = hora_adicional - 9
-          
+         
           soma_valores = valor_fixo + subtracao_de_juros
           valor_total = soma_valores - (soma_valores * 10 /100 )
 
@@ -105,7 +106,7 @@ while True:
               print("Avaliação\n1⭐\n2⭐⭐\n3⭐⭐⭐\n4⭐⭐⭐⭐\n5⭐⭐⭐⭐⭐")
               str(input("Deixe seu Feedback!\n"))
               print("Agradecemos seu Feedback!")
-              
+
           elif forma_pagamento == 2:
             saldo = float(input("Digite o saldo em sua conta:\n"))
             if saldo < valor_total:
@@ -122,7 +123,7 @@ while True:
           else:
             print("Selecione uma das duas formas de pagamento.\nDúvidas consultar o porteiro.")
 
-      elif escolha_saida == "2": 
+      elif escolha_saida == "2":
        verificacao_ticket = str(input("Você possui seu ticket?")).strip().lower()
        if verificacao_ticket == "sim":
         insercao_ticket = float(input("Insira seu Ticket:\n"))
@@ -145,10 +146,10 @@ while True:
 
         elif 0.15 < tempo_de_permanencia <=3:
            valor_fixo = 15.00
-      
+     
         elif tempo_de_permanencia >3:
           valor_fixo = 15.00
-          hora_adicional = tempo_de_permanencia * 3 
+          hora_adicional = tempo_de_permanencia * 3
           subtracao_de_juros = hora_adicional - 9
           valor_total = valor_fixo + subtracao_de_juros
 
@@ -201,27 +202,31 @@ while True:
          if tempo_de_permanencia <=0.15:
            valor_total = 50
            print(f"Valor total: R${valor_total}")
+           forma_pagamento = int(input("Sua forma de pagamento:\n1-Débito\n2-Pix\n"))
+
 
 
          elif 0.15 < tempo_de_permanencia <=3:
            valor_total = 65
            print(f"Valor total: R${valor_total}")
-      
+           forma_pagamento = int(input("Sua forma de pagamento:\n1-Débito\n2-Pix\n"))
+
+     
          elif tempo_de_permanencia >3:
-          valor_fixo = 15.00
-          hora_adicional = tempo_de_permanencia * 3 
-          subtracao_de_juros = hora_adicional - 9
-          valor_total = valor_fixo + subtracao_de_juros +50
+           valor_fixo = 15.00
+           hora_adicional = tempo_de_permanencia * 3
+           subtracao_de_juros = hora_adicional - 9
+           valor_total = valor_fixo + subtracao_de_juros +50
 
-         print(f"Valor total: R${valor_total}")
-       forma_pagamento = int(input("Sua forma de pagamento:\n1-Débito\n2-Pix\n"))
+           print(f"Valor total: R${valor_total}")
+           forma_pagamento = int(input("Sua forma de pagamento:\n1-Débito\n2-Pix\n"))
 
-      if forma_pagamento == 1:
-         saldo = float(input("Digite o saldo do seu cartão:\n"))
-         if saldo < valor_total:
+         if forma_pagamento == 1:
+          saldo = float(input("Digite o saldo do seu cartão:\n"))
+          if saldo < valor_total:
             print("Saldo Insuficiente.") #===========================
 
-         elif saldo >= valor_total:
+          elif saldo >= valor_total:
            saldo_restante = saldo - valor_total
            print("Processando Transação...")
            print(f"Saldo restante R${saldo_restante:.2f}")
@@ -233,9 +238,9 @@ while True:
 
            vagas_disponiveis = vagas_disponiveis +1
 
-      elif forma_pagamento == 2:
+       elif forma_pagamento == 2:
          saldo = float(input("Digite o saldo em sua conta:\n"))
-        
+       
          if saldo < valor_total:
           print("Saldo Insuficiente.")
 
@@ -246,12 +251,13 @@ while True:
           print("Passagem Liberada.")
           print("Agrademos pela preferência. Volte sempre!")
           print("Avaliação\n1⭐\n2⭐⭐\n3⭐⭐⭐\n4⭐⭐⭐⭐\n5⭐⭐⭐⭐⭐")
-          str(input("Deixe seu Feedback!\n"))
+          int(input("Deixe seu Avaliação!\n"))
           print("Agradecemos seu Feedback!")
-
           vagas_disponiveis = vagas_disponiveis +1
-        
+          
+       
        
    else:  
     print("Selecione uma opção válida.")
+
 
