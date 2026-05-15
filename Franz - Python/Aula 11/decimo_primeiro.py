@@ -10,5 +10,35 @@ def nome_da_funcao(parametro1, parametro2):
 
 def saudacao(nome):
     return f"Olá, {nome}!"
+print(saudacao("Franz"))
 
-def nome():
+def usuario():
+    nome = input("Digite seu nome: ")
+    return nome 
+print(f"Olá, {usuario()}!")
+
+def valores():
+    print("Digite três valores: ")
+    a = int(input("Digite o primeiro valor: "))
+    b = int(input("Digite o segundo valor: "))
+    c = int(input("Digite o terceiro valor: "))
+    return a, b, c
+print(f"O maior valor é: {max(valores())}")
+
+# # Reutilizando Funções
+usuario()
+valores()
+
+
+# Conceitos Chave
+#def: Indica o inicio da definição de uma função.
+#Nome: Identifica a função para você chama-la depois.
+#Parâmetros: Dados que a função recebe (opicional)
+#return: Envia o resultado de volta para quem chamou a função.
+#(opicional)
+
+# Exercicio 1: Crie uma função que solicite ao usuário um número e retorne o dobro desse número. Em seguida, chame a função e exiba o resultado.
+def calcular_dobro():
+    numero_usuario = float(input("Digite um número: "))
+    return numero_usuario * 2
+print(calcular_dobro())
