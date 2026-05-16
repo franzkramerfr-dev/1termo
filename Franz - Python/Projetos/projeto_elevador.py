@@ -16,6 +16,19 @@
 # O programa pode continuar rodando até que o usuario dedicada encerrar.
 # O elevador pode começar do andar 0.
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 import time
 andar_atual = 0
 while True:
@@ -52,4 +65,3 @@ while True:
          print ("Você chegou ao seu andar.")
          
          andar_atual = numero_andar - andar_atual
-
