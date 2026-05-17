@@ -29,9 +29,13 @@ Se você deseja testar os códigos localmente, siga os passos abaixo:
 
 ## 1. Clone o projeto:
 ```bash
-git clone [https://github.com/seu-usuario/seu-repositorio.git](https://github.com/seu-usuario/seu-repositorio.git)
-2. Entre no diretório:
+git clone (https://github.com/seu-usuario/seu-repositorio.git)
+
+## 2. Entre no diretório:
+```bash
 cd seu-repositorio
-3. Execute um exemplo:
+
+## 3. Execute um exemplo:
+```bash
 python aula_01/exercicio_exemplo.py
 Atenciosamente, [Franz].
